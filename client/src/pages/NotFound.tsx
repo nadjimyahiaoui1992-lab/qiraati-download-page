@@ -1,49 +1,44 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle, Home } from "lucide-react";
-import { useLocation } from "wouter";
+/* Style: ورق المدرسة المعاصر — صفحة خطأ RTL تطابق هوية Qiraati بدل التصميم العام الافتراضي. */
+import { ArrowRight, Compass, Download } from "lucide-react";
+import { Link } from "wouter";
 
 export default function NotFound() {
-  const [, setLocation] = useLocation();
-
-  const handleGoHome = () => {
-    setLocation("/");
-  };
-
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-        <CardContent className="pt-8 pb-8 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
-              <AlertCircle className="relative h-16 w-16 text-red-500" />
-            </div>
-          </div>
+    <main dir="rtl" className="paper-page flex min-h-screen items-center justify-center bg-[#f7f3eb] px-5 py-16 text-[#142b3d]">
+      <div className="relative w-full max-w-lg">
+        <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#62c7a4]/15 blur-3xl" />
+        <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-[#e2a92d]/10 blur-3xl" />
 
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+        <div className="relative rounded-[2rem] border border-[#dfe7df] bg-[#fffdf8] p-8 text-center shadow-[0_20px_50px_rgba(20,43,61,.1)] sm:p-12">
+          <span className="grid h-14 w-14 place-items-center rounded-2xl bg-[#142b3d] p-2 mx-auto shadow-[0_10px_30px_rgba(20,43,61,.18)]">
+            <img src="assets/qiraati-mark.png" alt="" className="h-full w-full object-contain" />
+          </span>
 
-          <h2 className="text-xl font-semibold text-slate-700 mb-4">
-            Page Not Found
-          </h2>
-
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Sorry, the page you are looking for doesn't exist.
-            <br />
-            It may have been moved or deleted.
+          <p className="mt-6 font-display text-sm font-black text-[#e2a92d]">صفحة غير موجودة</p>
+          <h1 className="mt-3 font-display text-3xl font-black leading-tight sm:text-4xl">
+            هذا الرابط خرج عن الجدول.
+          </h1>
+          <p className="mx-auto mt-4 max-w-sm text-sm leading-7 text-[#61707a]">
+            الصفحة اللي تدور عليها غير موجودة، يمكن نُقلت أو تغيّر رابطها. تقدر ترجع للصفحة الرئيسية أو تنزّل التطبيق مباشرة.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              onClick={handleGoHome}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#142b3d] px-6 py-3.5 text-sm font-extrabold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#1e4157] active:scale-[.97]"
             >
-              <Home className="w-4 h-4 mr-2" />
-              Go Home
-            </Button>
+              <Compass className="h-4 w-4 text-[#62c7a4]" /> العودة للصفحة الرئيسية
+            </Link>
+            <Link
+              href="/install"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#cbd8d1] bg-white px-6 py-3.5 text-sm font-extrabold text-[#31505d] transition duration-200 hover:border-[#62c7a4] active:scale-[.97]"
+            >
+              <Download className="h-4 w-4 text-[#0b8d6a]" /> طريقة التثبيت
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
-        </CardContent>
-      </Card>
-    </div>
+        </div>
+      </div>
+    </main>
   );
 }
