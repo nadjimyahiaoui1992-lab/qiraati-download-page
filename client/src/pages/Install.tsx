@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, ChevronDown, Download, HelpCircle, LockKeyhol
 import { Link } from "wouter";
 import { useState } from "react";
 
-const APK_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/download/v1.0.0/Qiraati-v1.0.0.apk";
+const APK_URL = "https://github.com/nadjimlab/quratie/releases/download/v1.0.0/Qiraati-v1.0.0.apk";
 
 const details = [
   ["هل التطبيق من Google Play؟", "لا. هذه نسخة APK رسمية منشورة من مستودع Qiraati، لذلك سيطلب Android تأكيد التثبيت من مصدر خارج المتجر."],

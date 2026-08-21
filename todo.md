@@ -8,6 +8,20 @@
 - [x] تشغيل TypeScript والبناء والمعاينة على سطح المكتب والهاتف.
 - [x] حفظ checkpoint جديد وتسليم النسخة للمستخدم.
 
+## هوية GitHub Portfolio الجديدة
+
+- [x] التحقق من توفر username: nadjimlab.
+- [x] تغيير اسم الحساب بعد تأكيد التوفر.
+- [ ] تحديث روابط GitHub Pages وQiraati وبيانات Open Graph.
+- [ ] التحقق من الروابط الجديدة.
+
+## نشر التحديث الحالي مباشرة على GitHub
+
+- [x] التحقق من commit صفحة التنزيل وأصول GitHub Release.
+- [x] تشغيل Workflow GitHub Pages بعد التحديث.
+- [x] التحقق من رابط APK باسم Qiraati وupdate.json.
+- [x] تسليم روابط GitHub النهائية.
+
 ## تسمية ملف APK للمستخدم
 
 - [x] إعادة تسمية APK إلى Qiraati-v1.0.0.apk في GitHub Release.

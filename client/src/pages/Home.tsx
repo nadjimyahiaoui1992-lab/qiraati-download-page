@@ -4,9 +4,9 @@ import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Link } from "wouter";
 
-const APK_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/download/v1.0.0/Qiraati-v1.0.0.apk";
-const RELEASE_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/tag/v1.0.0";
-const REPO_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie";
+const APK_URL = "https://github.com/nadjimlab/quratie/releases/download/v1.0.0/Qiraati-v1.0.0.apk";
+const RELEASE_URL = "https://github.com/nadjimlab/quratie/releases/tag/v1.0.0";
+const REPO_URL = "https://github.com/nadjimlab/quratie";
 
 const steps = [
   { number: "01", title: "نزّل الملف الرسمي", body: "اضغط على زر التنزيل من هذه الصفحة، وانتظر حتى يكتمل تحميل ملف APK." },
