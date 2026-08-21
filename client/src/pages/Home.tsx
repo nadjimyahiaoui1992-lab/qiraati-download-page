@@ -1,10 +1,12 @@
 /* Style: ورق المدرسة المعاصر — واجهة RTL تحريرية دافئة، عاجي/حبر بحري/نعناعي جزائري، مع أولوية واضحة لزر تنزيل Qiraati. */
 import { ArrowDownToLine, ArrowLeft, Check, Copy, Download, FileCheck2, ShieldCheck, Smartphone, Sparkles } from "lucide-react";
 import { useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 import { Link } from "wouter";
 
 const APK_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/download/v1.0.0/app-release.apk";
 const RELEASE_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/tag/v1.0.0";
+const REPO_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie";
 
 const steps = [
   { number: "01", title: "نزّل الملف الرسمي", body: "اضغط على زر التنزيل من هذه الصفحة، وانتظر حتى يكتمل تحميل ملف APK." },
@@ -113,7 +115,7 @@ export default function Home() {
 
       <section className="bg-[#fffdf8] px-5 py-16 lg:px-10"><div className="mx-auto max-w-3xl rounded-[2rem] border border-[#dfe7df] bg-[#f7f3eb] p-7 sm:p-10"><div className="flex items-start gap-4"><ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-[#0b8d6a]" /><div><h2 className="font-display text-xl font-extrabold text-[#142b3d]">تنبيه أمان مهم</h2><p className="mt-2 text-sm leading-7 text-[#61707a]">حمّل Qiraati من هذا الرابط الرسمي فقط. سيطلب Android تأكيد التثبيت من مصدر غير معروف لأن التطبيق خارج Google Play. يمكنك تفعيل السماح للمتصفح مؤقتًا ثم إيقافه بعد التثبيت.</p></div></div><div className="mt-7 flex flex-col gap-3 sm:flex-row"><button onClick={copyLink} className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#cad9d0] bg-white px-4 py-3 text-sm font-extrabold text-[#31505d] transition hover:border-[#62c7a4]">{copied ? <Check className="h-4 w-4 text-[#0b8d6a]" /> : <Copy className="h-4 w-4" />} {copied ? "تم نسخ الرابط" : "نسخ رابط التنزيل"}</button><a href={RELEASE_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-extrabold text-[#0b8d6a] hover:bg-white">عرض الإصدار والمعلومات <ArrowLeft className="h-4 w-4" /></a></div></div></section>
 
-      <footer className="border-t border-[#dfe7df] bg-[#f7f3eb] px-5 py-8 lg:px-10"><div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-[#70808a] sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Qiraati · تطبيق يساعد الولي والتلميذ</span><span>الإصدار العام v1.0.0</span></div></footer>
+      <section className="border-t border-[#dfe7df] bg-[#e6efe7] px-5 py-14 lg:px-10"><div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_auto] lg:items-center"><div><p className="mb-3 text-sm font-black text-[#0b8d6a]">نزّل من هاتف آخر</p><h2 className="font-display text-3xl font-black">امسح الرمز وابدأ.</h2><p className="mt-3 max-w-xl text-sm leading-7 text-[#52636d]">افتح كاميرا الهاتف، وجّهها نحو الرمز، ثم اضغط على الرابط الرسمي لتنزيل Qiraati.</p></div><div className="w-fit rounded-2xl bg-white p-4 shadow-[0_14px_30px_rgba(20,43,61,.1)]"><QRCodeSVG value={APK_URL} size={148} bgColor="#ffffff" fgColor="#142b3d" level="H" title="رمز تنزيل تطبيق Qiraati" /></div></div></section><footer className="border-t border-[#dfe7df] bg-[#f7f3eb] px-5 py-8 lg:px-10"><div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-[#70808a] sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Qiraati · تطبيق يساعد الولي والتلميذ</span><div className="flex flex-wrap items-center gap-5"><Link href="/privacy" className="font-bold transition-colors hover:text-[#0b8d6a]">سياسة الخصوصية</Link><a href={REPO_URL} target="_blank" rel="noreferrer" className="font-bold transition-colors hover:text-[#0b8d6a]">الدعم على GitHub</a><span>الإصدار العام v1.0.0</span></div></div></footer>
     </main>
   );
 }
