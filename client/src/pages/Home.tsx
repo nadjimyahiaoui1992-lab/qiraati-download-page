@@ -4,7 +4,7 @@ import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Link } from "wouter";
 
-const APK_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/download/v1.0.0/app-release.apk";
+const APK_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/download/v1.0.0/Qiraati-v1.0.0.apk";
 const RELEASE_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie/releases/tag/v1.0.0";
 const REPO_URL = "https://github.com/nadjimyahiaoui1992-lab/quratie";
 
