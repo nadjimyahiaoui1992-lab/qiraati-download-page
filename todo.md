@@ -8,6 +8,12 @@
 - [x] تشغيل TypeScript والبناء والمعاينة على سطح المكتب والهاتف.
 - [x] حفظ checkpoint جديد وتسليم النسخة للمستخدم.
 
+## إصلاح GitHub Pages Router
+
+- [ ] إصلاح قاعدة Router لمسار /qiraati-download-page/.
+- [ ] اختبار الصفحة الرئيسية والخصوصية ودليل التثبيت داخل المسار الفرعي.
+- [ ] إعادة نشر GitHub Pages والتحقق من الهاتف.
+
 ## هوية GitHub Portfolio الجديدة
 
 - [x] التحقق من توفر username: nadjimlab.
