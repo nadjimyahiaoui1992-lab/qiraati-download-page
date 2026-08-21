@@ -31,7 +31,7 @@ export default function Home() {
         <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-6 lg:px-10">
           <Link href="/" className="group flex items-center gap-3" aria-label="العودة إلى الصفحة الرئيسية">
             <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#142b3d] p-2 shadow-[0_10px_30px_rgba(20,43,61,.18)] transition-transform duration-200 group-hover:-rotate-3">
-              <img src="/manus-storage/qiraati-mark_9101e366.png" alt="" className="h-full w-full object-contain" />
+              <img src="assets/qiraati-mark.png" alt="" className="h-full w-full object-contain" />
             </span>
             <span>
               <span className="block font-display text-xl font-extrabold tracking-tight">Qiraati</span>
